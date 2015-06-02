@@ -1,0 +1,14 @@
+machine:
+  services:
+    - docker
+  pre:
+    - git config --global user.email "automation@tickli.sh"
+    - git config --global user.name "CircleCI"
+  ruby:
+    version: 2.1.3
+
+test:
+  override:
+    - docker info
+    - make build
+    - make test

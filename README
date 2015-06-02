@@ -1,0 +1,20 @@
+# Ubuntu Base
+
+Docker image inheritance:
+ * ubuntu:15.04
+
+## Volumes
+
+None
+
+## Ports
+
+None
+
+## Example usage
+
+This is an intermediary container and not designed to be used directly.
+
+## Child containers
+
+ * shift/java

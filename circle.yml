@@ -19,4 +19,4 @@ deployment:
     commands:
       - docker images --all
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push ${CIRCLE_USERNAME}/ubuntu:15.04
+      - docker push ${DOCKER_USER}/ubuntu:15.04

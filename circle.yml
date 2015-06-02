@@ -17,4 +17,4 @@ deployment:
   hub:
     branch: master
     commands:
-      - curl -H "Content-Type: application/json" --data '{"build": true}' -X POST ${BUILD_HOOK}
+      - "curl -H \"Content-Type: application/json\" --data '{\"build\": true}' -X POST ${BUILD_HOOK}"

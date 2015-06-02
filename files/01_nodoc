@@ -1,0 +1,21 @@
+path-exclude /usr/share/doc/*
+path-include /usr/share/doc/*/copyright
+path-exclude /usr/share/man/*
+path-exclude /usr/share/groff/*
+path-exclude /usr/share/info/*
+path-exclude /usr/share/lintian/*
+path-exclude /usr/share/linda/*
+
+path-exclude /usr/share/locale/*
+path-include /usr/share/locale/en*
+path-exclude /usr/share/locale/de*
+path-exclude /usr/share/locale/es*
+path-exclude /usr/share/locale/ja*
+path-exclude /usr/share/locale/fr*
+path-exclude /usr/share/locale/zh*
+
+path-exclude /usr/share/pyshared/twisted/test*
+path-exclude /usr/lib/python*/dist-packages/twisted/test*
+path-exclude /usr/share/pyshared/twisted/*/test*
+path-exclude /usr/lib/python*/dist-packages/twisted/*/test*
+

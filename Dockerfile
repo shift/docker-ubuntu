@@ -10,12 +10,12 @@ ENV LANGUAGE en_GB:en
 ENV LC_ALL en_GB.UTF-8
 
 RUN rm -rf /usr/share/doc/* \
+    && locale-gen en_GB.UTF-8 \
     && rm -rf /usr/share/{doc,man,groff,info,lintian,linda,locale/de,locale/es,locale/ja,locale/fr,locale/zh}/* \
     && apt-get update \
     && apt-get upgrade --yes \
     && apt-get install --yes\
     && for package in `dpkg --get-selections | grep -v libc-bin | grep -v deinstall | cut -f 1`; do echo "Reconfigure $package"; dpkg-reconfigure -plow $package; done \
-    && locale-gen en_GB.UTF-8 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 ONBUILD RUN apt-get update \
